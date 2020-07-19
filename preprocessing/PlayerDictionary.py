@@ -8,10 +8,10 @@ class PlayerDictionary(dict):
             self.__getitem__(key).__setitem__(key,value)
             return
         else:
-            copyDict = self.innerDict.copy()
-            copyDict.__setitem__(self,"passing",{})
-            copyDict.__setitem__(self,"rushing",{})
-            copyDict.__setitem__(self,"receiving",{})
+            copydict = self.innerDict.copy()
+            copydict.__setitem__(self,"passing",[])
+            copydict.__setitem__(self,"rushing",[])
+            copydict.__setitem__(self,"receiving",[])
         self.itemlist.append(key)
         super(PlayerDictionary,self).__setitem__(key, value)
     def __iter__(self):
